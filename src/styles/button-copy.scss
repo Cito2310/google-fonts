@@ -1,0 +1,59 @@
+.button-copy {
+    all: unset;
+    
+    aspect-ratio: 1;
+    background-color: #D2E0F8;
+    border-radius: 0.6em;
+    box-shadow:  4px 4px 7px #c1cee4,
+                -4px -4px 7px #e3f2ff;
+    cursor: pointer;
+    display: flex;
+    height: 2.2em;
+    margin: auto 0;
+    position: relative;
+    transition: box-shadow 0.2s, background-color 0.2s;
+    
+    &:hover {
+        background-color: #cbdeff;
+        box-shadow: 3px 3px 7px #a7b4ca,
+                    -3px -3px 7px #e3f2ff;
+    }
+    &:active {
+        background-color: #c9dbfa;
+        box-shadow: 2px 2px 5px #707b8d,
+                    -2px -2px 5px #e3f2ff;
+    }
+
+    i {
+        font-size: 1.4em;
+        margin: auto;
+    }
+    
+    .container-advert {
+        /* From https://css.glass */
+        -webkit-backdrop-filter: blur(4.7px);
+        animation: animation-advert-show-hidden 0s linear;
+        backdrop-filter: blur(4.7px);
+        border-radius: 0.6em;
+        border: 1px solid rgba(255, 255, 255, 0.29);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        font-weight: 400;
+        height: calc(100% - 1px*2);
+        position: absolute;
+        right: 120%;
+
+        .text-advert {
+            margin: auto;
+            padding: 0 0.6em;
+        }
+    }
+}
+
+@keyframes animation-advert-show-hidden {
+    0% { opacity: 0 }
+    25% { opacity: 1 }
+    75% { opacity: 1 }
+    100% { opacity: 0 }
+}
